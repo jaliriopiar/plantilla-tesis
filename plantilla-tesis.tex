@@ -49,10 +49,13 @@ inner=3.25cm,
 outer=2.5cm
 }
 
-%\usepackage[frame,a4,center,dvips]{crop} %ejes
+%\usepackage[cam,a4,center,dvips]{crop} %ejes
 \usepackage[a4,center,dvips]{crop} %centrada
 %\usepackage{crop} %esquina
 
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=red,citecolor=black,urlcolor=red,bookmarks=false}
+%\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,bookmarks=false}
 %\usepackage{tocloft}
 %para personalizar la toc.
 
@@ -109,6 +112,11 @@ outer=2.5cm
 %serie de tamaños de fuente: \tiny, \scriptsize, \footnotesize, \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
 
 \addtolength{\headheight}{12pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                         %
+%   Para encabezados y pies de página     %
+%                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{fancyhdr}
 %\pagestyle{plain} 
 \renewcommand{\footrulewidth}{0pt}
@@ -170,6 +178,10 @@ outer=2.5cm
 
 \hyphenation{mRNA miRNA miRNAs mRNAs}
 
+
+\newcommand{\titulo}{Este es el nuevo título de mi Tesis}
+\newcommand{\fecha}{22 julio 2016}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                 %
 %                BEGIN DOCUMENT                   %
@@ -189,14 +201,23 @@ outer=2.5cm
 \pagestyle{empty}
 \begin{center}
 \LARGE
-Título de la Tesis
+\titulo
 \end{center}
-\vspace{20ex}
+%\vspace{20ex}
+
+%\vfill
+
+\vspace{\stretch{1}}
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=.5\textwidth]{escudo_ugr_portada}
+\includegraphics[width=.6\textwidth]{escudo_ugr_portada}
 \end{figure}
-\vspace{25ex}
+
+%\vspace{25ex}
+%\vfill
+
+\vspace{\stretch{2}}
 
 \begin{center}
 \large
@@ -206,7 +227,7 @@ Nombre Apellidos
 \large
 Tesis Doctoral
 
-8 de Julio de 2011
+\fecha
 \end{center}
 %\newpage
 \cleardoublepage
@@ -250,7 +271,7 @@ Centro de Investigaci\'on Biom\'edica
 \vfill
 \begin{center}
 \LARGE
-Título de la Tesis
+\titulo
 
 \end{center}
 \vfill
@@ -273,33 +294,32 @@ Memoria de Tesis Doctoral presentada por la Licenciada Nombre Apellidos  para op
 
 \vspace{29.7ex}
 
-\centering 8 de Julio de 2011
+\centering 
+Fulanita de tal
+
+\fecha
 
 \end{minipage}
 
 
-\newpage
+%\newpage
 \cleardoublepage
 \thispagestyle{empty}
 
-{\rule{0pt}{85ex} El presente trabajo se ha desarrollado en los laboratorios del Departamento de Gen\'etica y del Instituto de Biotecnolog\'ia en la Facultad de Ciencias y en el Centro de Investigaci\'on Biom\'edica (CIBM) de la Universidad de Granada. La investigaci\'on realizada ha sido financiada por la Junta de Andalucía, mediante la concesi\'on de una beca predoctoral. Este trabajo ha sido financiado por la Junta de Andalucía, a través del Programa de Ayudas a Grupos de Investigación (Grupo PAI BIO-109) y de un Proyecto de Excelencia (CVI-2057).
+\null\vspace{\stretch{5}}
+El presente trabajo se ha desarrollado en los laboratorios del Departamento de Gen\'etica y del Instituto de Biotecnolog\'ia en la Facultad de Ciencias y en el Centro de Investigaci\'on Biom\'edica (CIBM) de la Universidad de Granada. La investigaci\'on realizada ha sido financiada por la Junta de Andalucía, mediante la concesi\'on de una beca predoctoral. Este trabajo ha sido financiado por la Junta de Andalucía, a través del Programa de Ayudas a Grupos de Investigación (Grupo PAI BIO-109) y de un Proyecto de Excelencia (CVI-2057).
+\vspace{\stretch{1}}
  
- 
-\newpage
 \cleardoublepage
 \input{agradecimientos.tex}
-\newpage
 \cleardoublepage
 \null\vspace{\stretch{2}}
-{
 \begin{flushright}
  Dedicado a mis Padres 
 
 y también a mis Hermanos
 \end{flushright}
-}
 \vspace{\stretch{1}}
-\newpage
 \cleardoublepage
 
 
@@ -323,7 +343,6 @@ Charles Reade
 \end{minipage}
 }
 \vspace{\stretch{1}}
-\newpage
 \cleardoublepage
 
 
@@ -331,89 +350,52 @@ Charles Reade
 
 
 
-\dominitoc
-\dominilof
-\dominilot
+%\dominitoc
+%\dominilof
+%\dominilot
 \tableofcontents
 \listoffigures
 \listoftables
 \clearpage
 \input{abreviaturas-utf.tex}
 
-%\input{agradecimientos.tex}
-%\input{resumen.tex}
-\pagestyle{fancy}
-
+%\pagestyle{fancy}
 
 \mainmatter
 
-
-
 \pagestyle{fancy}
-\lhead{\nouppercase{\bfseries{\leftmark}}}
-\rhead{\nouppercase{\bfseries{\rightmark}}}
+\lhead{\uppercase{\bfseries{\leftmark}}}
+\rhead{\uppercase{\bfseries{\rightmark}}}
 \fancyhead[LO]{\bfseries{}}
 \fancyhead[RE]{\bfseries{}}
 %\fancyfoot[RO]{\thepage}
 %\fancyfoot[LE]{\thepage}
 \cfoot{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0,2pt}
 %estilo de las cabeceras y los pies: L=left, R=right, E=even, O=odd (impares).
 \chapter{Abstract}
 \input{resumen.tex}
 
 \chapter{Introducción y Objetivos}
-%\minitoc
 \input{introduccion/objetivos.tex}
-%\newpage
-
-
-
 
 \chapter{Antecedentes}
-\minitoc
 \input{introduccion/Introduccion.tex}
-%\newpage
-
-
 
 \chapter{Material y Métodos}
-\minitoc
 \input{mat-met/materialYmetodos.tex}
-%\newpage
 
 \chapter{Resultados}
-\minitoc
 \input{resultados/resultados.tex}
-%\newpage
-
-%\input{resultados-utf.tex}
 
 \chapter{Discusión}
-\minitoc
 \input{discusion/discusion.tex}
-%\newpage
-
-%\input{discusion-utf8.texs
 
 \chapter{Conclusiones}
-\minitoc
 \input{discusion/conclusiones.tex}
-%\newpage
 
 
-%\input{conclusiones-utf8.tex}
-%\input{Introduction.tex}
-%\input{Aims_and_Objectives.tex}
-%\input{Material_and_Methods.tex}
-%\input{Results.tex}
-%\input{Discussion.tex}
-%\pagestyle{empty}
-%\input{Conclusion.tex}
-%\addcontentslineA{toc}{chapter}{Bibliography}
-%\newpage
-%\pagestyle{fancy}
-%\bibliography{bib_manual,Bibliographydatabase}
+%\addcontentsline{toc}{chapter}{Bibliography}
 \begin{singlespace}
 	\begin{footnotesize}
 		\begin{twocolumn}
@@ -422,5 +404,4 @@ Charles Reade
 \end{footnotesize}
 \end{singlespace}
 
-%\addcontentsline{toc}{chapter}{Bibliography}
 \end{document}
