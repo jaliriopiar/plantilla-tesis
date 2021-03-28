@@ -6,7 +6,6 @@
 \usepackage[spanish]{babel}
 \addto{\captionsspanish}{\def\chaptername{}}
 % para que no aparezaca la palabra capítulo.
-\usepackage{rotating}
 \usepackage{xspace}
 %\usepackage{xy}
 \usepackage{amsmath}
@@ -15,11 +14,11 @@
 \usepackage{textcomp} %para \textcelsius
 \usepackage[indent,small,it,bf]{caption}
 %formato de los captions (pies de tablas y figuras): ``using imported graphics in latex (pág 50).
-\usepackage[tight]{minitoc}
-\setcounter{minitocdepth}{2}
+%\usepackage[tight]{minitoc}
+%\setcounter{minitocdepth}{2}
 % tablas de contenidos en cada capitulo.
-\bibliographystyle{fany}
-\usepackage[nottoc,notlot,notlof]{tocbibind}
+\bibliographystyle{estilo}
+%\usepackage[nottoc,notlot,notlof]{tocbibind}
 % para que la bibliografía salga en el índice y no lo haga el lot y el lof.
 \usepackage{multicol}
 % para juntar columnas en las tablas.
@@ -36,7 +35,7 @@
 \usepackage{rotating}
 %para rotar texto
 
-\usepackage{texshade}
+%\usepackage{texshade}
 \usepackage{longtable}
 %\usepackage[paperwidth=17.5cm,paperheight=25cm,top=3cm,bottom=2.75cm,inner=3cm,outer=2.5cm,dvips=false,pdftex=false,vtex=false]{geometry}
 \usepackage[]{geometry}
@@ -88,7 +87,6 @@ outer=2.5cm
 % \setcounter{secnumdepth}{5}
 % numera todos los epígrafes hasta nivel \subparagraph en el cuerpo del documento
 
-\usepackage{rotating}
 
 \makeatletter
 \def\@makechapterhead#1{%
@@ -106,7 +104,7 @@ outer=2.5cm
 \makeatother
 % Cambia el formato de los títulos de los capítulos.
 
-\renewcommand{\mtctitle}{Contenidos}
+%\renewcommand{\mtctitle}{Contenidos}
 % Cambia Contents por Contenidos en las minitocs.
 
 %serie de tamaños de fuente: \tiny, \scriptsize, \footnotesize, \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
@@ -143,9 +141,9 @@ outer=2.5cm
 
 \newcommand{\um}{\ensuremath{\mu m}}
 
-\newcommand{\subsubsubsection}[1]{\paragraph{\vspace{1ex}#1\vspace{1ex}}}
-\newcommand{\apartado}[1]{\vspace{1ex}\noindent\textbf{\emph{#1}}\vspace{1ex}}
-\newcommand{\titulillo}[1]{\vspace{1ex}\textbf{\Large #1}\vspace{1ex}}
+%\newcommand{\subsubsubsection}[1]{\paragraph{\vspace{1ex}#1\vspace{1ex}}}
+%\newcommand{\apartado}[1]{\vspace{1ex}\noindent\textbf{\emph{#1}}\vspace{1ex}}
+%\newcommand{\titulillo}[1]{\vspace{1ex}\textbf{\Large #1}\vspace{1ex}}
 \newcommand{\GC}{\textcelsius\xspace}
 \newcommand{\ul}{\ $\mu$l\xspace}
 \newcommand{\ug}{\ $\mu$g\xspace}
@@ -154,9 +152,8 @@ outer=2.5cm
 
 \newcommand{\gris}[2]{\multicolumn{1}{>{\columncolor[gray]{0.9}}#1}{#2}}
 %\newcommand{\gris}[2]{\multicolumn{1}{#1}{#2}}
-\newcommand{\mirnam}{$\mu$iRNAM\xspace}
 
-\newcommand{\epigrafe}[1]{\textbf{\emph{#1}}}
+%\newcommand{\epigrafe}[1]{\textbf{\emph{#1}}}
 
 %\setlength{\extrarowheight}{-.5cm}
 
@@ -174,7 +171,7 @@ outer=2.5cm
 
 
 %\usepackage[none]{hyphenat}
-%		\hyphenation{mRNA mRNAs re-gu-la-do e-sen-ci-al te-ner re-fi-rién-do-nos me-ca-nis-mos di-fe-ren-cia-ción mo-le-cu-lar tes-ti-cu-lar re-gu-la-ción dis-mi-nu-ye ex-pe-ri-men-tos re-pri-mien-do ma-yor trans-crip-cio-nal se-xual Rspondin microRNAs co-re-gu-la-do-res li-gan-dos spli-cing ha-cer li-mi-ta-da a-pro-xi-ma-da-men-te miRNAs a-que-llas ma-mí-fe-ros ha-cer em-brio-na-rias des-co-no-ci-da  ma-es-tros re-tro-a-li-men-ta-ción de-sar-ro-llo su-gi-ri-ó e-jem-plo e-li-mi-na-ción me-ca-nis-mo sub-fa-mi-lia dia-na ne-ga-ti-va me-dian-te si-len-cia-mien-to exo-nu-cleo-lí-ti-ca a-ni-males rá-pi-da-men-te sen-si-bi-li-dad re-gu-la-do-res dia-nas u-san-do ad-mi-nis-tra-do te-ra-péu-ti-cas te-ra-péu-ti-co ad-mi-nis-tra-ción}
+%		\hyphenation{mRNA mRNAs re-gu-la-do e-sen-ci-al}
 
 \hyphenation{mRNA miRNA miRNAs mRNAs}
 
@@ -399,7 +396,7 @@ Charles Reade
 \begin{singlespace}
 	\begin{footnotesize}
 		\begin{twocolumn}
-\bibliography{bb,bibliografia2-utf,bibliografia-nueva-utf}
+\bibliography{biblio}
 \end{twocolumn}
 \end{footnotesize}
 \end{singlespace}
