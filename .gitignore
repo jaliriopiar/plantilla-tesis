@@ -30,3 +30,7 @@
 *.pdf
 *.toc
 *.out
+*.nav
+*.snm
+*~
+
