@@ -4,19 +4,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[spanish]{babel}
-\addto{\captionsspanish}{\def\chaptername{}}
-% para que no aparezaca la palabra capítulo.
 \usepackage{xspace}
-%\usepackage{xy}
 \usepackage{amsmath}
 \usepackage{framed}
 \usepackage{type1cm}
 \usepackage{textcomp} %para \textcelsius
 \usepackage[indent,small,it,bf]{caption}
 %formato de los captions (pies de tablas y figuras): ``using imported graphics in latex (pág 50).
-%\usepackage[tight]{minitoc}
-%\setcounter{minitocdepth}{2}
-% tablas de contenidos en cada capitulo.
 \bibliographystyle{estilo}
 %\usepackage[nottoc,notlot,notlof]{tocbibind}
 % para que la bibliografía salga en el índice y no lo haga el lot y el lof.
@@ -24,7 +18,9 @@
 % para juntar columnas en las tablas.
 \usepackage{marvosym,amssymb,url}
 % para insertar símbolos como \Male y \Female.
-\usepackage{setspace,paralist,mdwlist,graphicx}
+\usepackage{setspace,paralist,mdwlist}
+%personalizar listas
+\usepackage{graphicx}}
 %paquetes para insertar imágenes.
 \usepackage{afterpage}
 %para colocar un float en la pagina siguiente
@@ -36,6 +32,7 @@
 %para rotar texto
 
 %\usepackage{texshade}
+% alineaciones de secuencias etc.. requiere paso por postscript
 \usepackage{longtable}
 %\usepackage[paperwidth=17.5cm,paperheight=25cm,top=3cm,bottom=2.75cm,inner=3cm,outer=2.5cm,dvips=false,pdftex=false,vtex=false]{geometry}
 \usepackage[]{geometry}
@@ -59,12 +56,10 @@ outer=2.5cm
 %para personalizar la toc.
 
 \usepackage{epsfig}
-%para que latex pueda rotular las figuras.
+%para que latex pueda rotular las figuras. Requiere paso por postscript. Uso de xfig
 \usepackage{texshade}
 %(para crear los alineamientos de secuencias)
 \usepackage{hhline}
-%\usepackage{xcolor}
-% colorear texto.
 
 \usepackage{fancyvrb}
 
@@ -78,9 +73,8 @@ outer=2.5cm
 	plus .1\baselineskip
 		minus .4\baselineskip
 		}
-
-
 % sepaqración entre párrafos.
+
 \setcounter{tocdepth}{2}
 % profundidad en la tabla de contenidos.
 
@@ -103,9 +97,6 @@ outer=2.5cm
 }}
 \makeatother
 % Cambia el formato de los títulos de los capítulos.
-
-%\renewcommand{\mtctitle}{Contenidos}
-% Cambia Contents por Contenidos en las minitocs.
 
 %serie de tamaños de fuente: \tiny, \scriptsize, \footnotesize, \small, \normalsize, \large, \Large, \LARGE, \huge, \Huge
 
@@ -347,9 +338,6 @@ Charles Reade
 
 
 
-%\dominitoc
-%\dominilof
-%\dominilot
 \tableofcontents
 \listoffigures
 \listoftables
