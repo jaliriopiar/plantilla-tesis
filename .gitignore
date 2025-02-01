@@ -33,4 +33,7 @@
 *.nav
 *.snm
 *~
+*.bbl
+*.blg
+*.gz
 

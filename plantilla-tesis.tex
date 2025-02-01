@@ -1,38 +1,34 @@
 \documentclass[b5paper,twoside,10pt]{book}
-\usepackage{natbib}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[spanish]{babel}
-\usepackage{xspace}
-\usepackage{amsmath}
-\usepackage{framed}
-\usepackage{type1cm}
+\usepackage{natbib} %bibliografía
+\usepackage[utf8]{inputenc} %codificación de entrada
+\usepackage[T1]{fontenc} %codificación de fuentes
+\usepackage{lmodern} %fuente principal
+\usepackage[spanish]{babel} %idioma del documento
+\usepackage{xspace} %espacios inteligentes para definiciones de comandos
+\usepackage{amsmath} % comandos matemáticas
+\usepackage{framed} % Pone un marco alrededor del texto \begin{frame}..\end{frame}
+\usepackage{type1cm} %permite tamaños arbitrarios de fuentes escalables
 \usepackage{textcomp} %para \textcelsius
-\usepackage[indent,small,it,bf]{caption}
+\usepackage[indent,small,it,bf]{caption} %personalizar captions
 %formato de los captions (pies de tablas y figuras): ``using imported graphics in latex (pág 50).
-\bibliographystyle{estilo}
-%\usepackage[nottoc,notlot,notlof]{tocbibind}
-% para que la bibliografía salga en el índice y no lo haga el lot y el lof.
-\usepackage{multicol}
-% para juntar columnas en las tablas.
-\usepackage{marvosym,amssymb,url}
+\bibliographystyle{estilo} %estilo personalizado de bibliografía
+\usepackage[nottoc,notlot,notlof]{tocbibind} % para que la bibliografía salga en el índice y no lo haga el lot y el lof.
+\usepackage{multicol} % para juntar columnas en las tablas.
+\usepackage{marvosym,amssymb,url} %simbolor y URLs
 % para insertar símbolos como \Male y \Female.
-\usepackage{setspace,paralist,mdwlist}
-%personalizar listas
-\usepackage{graphicx}}
-%paquetes para insertar imágenes.
-\usepackage{afterpage}
-%para colocar un float en la pagina siguiente
-\usepackage[table]{xcolor}
-%permite poner colores en las tablas
-\usepackage{multirow}
-%para juntar filas en las tablas
-\usepackage{rotating}
-%para rotar texto
+
+\usepackage{setspace,paralist,mdwlist} %personalización de listas
+
+\usepackage{graphicx} %paquetes para insertar imágenes.
+
+\usepackage{afterpage} %para ejecutar un comando cuando termina la página \afterpage{}
+\usepackage[table]{xcolor} %permite poner colores en las tablas
+\usepackage{multirow} %para juntar filas en las tablas
+\usepackage{rotating} %para rotar texto
 
 %\usepackage{texshade}
 % alineaciones de secuencias etc.. requiere paso por postscript
+
 \usepackage{longtable}
 %\usepackage[paperwidth=17.5cm,paperheight=25cm,top=3cm,bottom=2.75cm,inner=3cm,outer=2.5cm,dvips=false,pdftex=false,vtex=false]{geometry}
 \usepackage[]{geometry}
@@ -45,9 +41,11 @@ inner=3.25cm,
 outer=2.5cm
 }
 
+% Para cuanse imprime un B5 en hijas A4
 %\usepackage[cam,a4,center,dvips]{crop} %ejes
 \usepackage[a4,center,dvips]{crop} %centrada
 %\usepackage{crop} %esquina
+
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=red,citecolor=black,urlcolor=red,bookmarks=false}
@@ -57,23 +55,23 @@ outer=2.5cm
 
 \usepackage{epsfig}
 %para que latex pueda rotular las figuras. Requiere paso por postscript. Uso de xfig
-\usepackage{texshade}
-%(para crear los alineamientos de secuencias)
-\usepackage{hhline}
 
-\usepackage{fancyvrb}
+%\usepackage{hhline} %líneas complejas en tablas
+
+\usepackage{fancyvrb} %para texto verbatim
 
 \date{8 de Julio de 2011}
 
 \title{Aquí va el título de la tesis}
 
 \author{Nombre y Apellidos}
+
 %\setlength{\parskip}{.7ex}
 \setlength\parskip{.5\baselineskip
 	plus .1\baselineskip
 		minus .4\baselineskip
 		}
-% sepaqración entre párrafos.
+% separación entre párrafos.
 
 \setcounter{tocdepth}{2}
 % profundidad en la tabla de contenidos.
@@ -140,17 +138,10 @@ outer=2.5cm
 \newcommand{\ug}{\ $\mu$g\xspace}
 \newcommand{\infi}{$\infty$}
 \newcommand{\uM}{$\mu$M}
-
-\newcommand{\gris}[2]{\multicolumn{1}{>{\columncolor[gray]{0.9}}#1}{#2}}
-%\newcommand{\gris}[2]{\multicolumn{1}{#1}{#2}}
-
-%\newcommand{\epigrafe}[1]{\textbf{\emph{#1}}}
-
-%\setlength{\extrarowheight}{-.5cm}
-
+\usepackage{float} % para colocar con H los flotantes
 
 %para poner las figuras con solo \figura{nombre archivo sin extensión}{tamaño .8}{titulo corto xa el índice}{pie figura}
-\usepackage{float}
+
 \newcommand{\figura}[4]{%
    \begin{figure}[htbp]
     \begin{center}
@@ -164,7 +155,7 @@ outer=2.5cm
 %\usepackage[none]{hyphenat}
 %		\hyphenation{mRNA mRNAs re-gu-la-do e-sen-ci-al}
 
-\hyphenation{mRNA miRNA miRNAs mRNAs}
+%\hyphenation{mRNA miRNA miRNAs mRNAs}
 
 
 \newcommand{\titulo}{Este es el nuevo título de mi Tesis}
@@ -181,9 +172,9 @@ outer=2.5cm
 
 \frontmatter
 
-\renewcommand{\labelitemi}{$\bullet$}
-\renewcommand{\labelitemii}{---}
-\renewcommand{\labelitemiii}{--}
+%\renewcommand{\labelitemi}{$\bullet$}
+%\renewcommand{\labelitemii}{---}
+%\renewcommand{\labelitemiii}{--}
 
 
 \pagestyle{empty}
